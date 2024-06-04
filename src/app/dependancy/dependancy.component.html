@@ -1,0 +1,31 @@
+<br>
+{{Training}}
+<button (click)="logger()">Show Table</button>
+<div *ngFor="let customer of customers; let i=index;let isEven=even;">
+  <!-- interpolation -->
+  <!-- <div>{{customer}}</div> -->
+  <div>{{i}}</div>
+  <div>{{isEven}}</div>
+  <div>{{customer.name}}</div>
+  <div>{{customer.age}}</div>
+  <div *ngFor="let child of customer.child">
+    Child Name: {{child.childname}}
+  </div>
+  <br>
+</div>
+<br>
+<h2>Lower and upper case PIPE example</h2>
+<p><i>In lowercase : {{string | lowercase}}</i></p>
+<p><i>In Uppercase : {{string1 | uppercase}}</i></p>
+<h4>Today is {{today | date:"dd/MM/yyyy"}}</h4>
+
+<h2>Async Pipe Example</h2>
+<p>wait... {{promise | async}}</p>
+<button (click)="clickMe()">Click me to initiate promise</button>
+
+<h2>Currency Pipe Example</h2>
+<p>A in USD: {{a | currency:'USD':true}}</p>
+<p>B in INR: {{b | currency:'INR':false:'4.2-2'}}</p>
+
+<h2>Custom Pipe with discount</h2>
+{{price | discount}}

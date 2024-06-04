@@ -1,0 +1,10 @@
+.underlined {
+    border-bottom: 1px solid #ccc;
+}
+
+.orange {
+    color: rgb(56, 126, 205);
+}
+.big {
+    font-size: 2rem;
+}
